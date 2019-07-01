@@ -1,0 +1,27 @@
+<h3>{{titulo}}</h3>
+ 
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Reg. Ativo</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+ 
+    <tbody>
+        <tr *ngFor="let heroi of herois; let i = index;">
+        <td>{{ heroi.id }}</td>        
+        <td>{{ heroi.nome }}</td>        
+        <td *ngIf='heroi.ativo'>Sim</td>
+        <td *ngIf='!heroi.ativo'>Não</td>
+        <td><a (click)="editar(heroi.id);">Editar</a></td>
+        <td><a (click)="excluir(heroi.id, i);">Excluir</a></td>
+        </tr>
+        <tr>
+           <td colspan="6" style="text-align: right;">Total de Registros: {{ herois.length }}</td> 
+        </tr>
+    </tbody>
+</table>

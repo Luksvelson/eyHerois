@@ -1,0 +1,21 @@
+ 
+<form (ngSubmit)="salvar()">   
+ 
+  <br/>
+  <h3>{{titulo}}</h3>
+
+  <label>ID
+      <input type="input" name="id" size="10" [(ngModel)]="heroi.id" disabled/>
+  </label><br/><br/>
+
+  <label>Nome:
+      <input type="input" name="nome" size="30" [(ngModel)]="heroi.nome"/>
+  </label><br/><br/>
+
+  <!-- <label>Registro Ativo:
+      <input type="radio" name="ativo" [(ngModel)]="heroi.ativo" [value]="true">Sim
+      <input type="radio" name="ativo" [(ngModel)]="heroi.ativo" [value]="false">Não<br>
+  </label><br/><br/> -->
+
+  <button type="submit">Salvar</button>
+</form>
